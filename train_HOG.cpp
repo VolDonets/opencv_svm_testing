@@ -100,6 +100,7 @@ void computeHOGs( const Size wsize, const vector< Mat > & img_lst, vector< Mat >
 {
     HOGDescriptor hog;
     hog.winSize = wsize;
+    std::cout << "winSize: " << wsize.width << " * " << wsize.height << "\n";
     Mat gray;
     vector< float > descriptors;
     for( size_t i = 0 ; i < img_lst.size(); i++ )

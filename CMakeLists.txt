@@ -4,9 +4,10 @@ project(opencv_svm_testing)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(opencv_svm_testing
+#        ocv_svm_hog_detector.cpp
 #        ocv_svm_hog_train.cpp
         train_HOG.cpp
-        )
+)
 
 target_link_libraries(opencv_svm_testing seasocks "${ZLIB_LIBRARIES}")
 target_link_libraries(opencv_svm_testing pthread z)
