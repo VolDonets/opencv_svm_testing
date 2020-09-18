@@ -261,7 +261,7 @@ int main( int argc, char** argv )
     labels.assign( positive_count, +1 );
     cout << "...[done] ( positive images count : " << positive_count << " )" << endl;
     cout << "Histogram of Gradients are being calculated for negative images...";
-    computeHOGs( pos_image_size, neg_lst, gradient_lst, flip_samples );
+    computeHOGs(pos_image_size, neg_lst, gradient_lst, flip_samples);
     size_t negative_count = gradient_lst.size() - positive_count;
     labels.insert( labels.end(), negative_count, -1 );
     CV_Assert( positive_count < labels.size() );

@@ -45,7 +45,6 @@ void test_trained_detector(std::string obj_det_filename, std::string videofilena
             cv::Scalar color = cv::Scalar(0, foundWeights[j] * foundWeights[j] * 200, 0);
             rectangle(img, detections[j], color, img.cols / 400 + 1);
         }
-        std::cout << "img params: " << img.cols << " * " << img.rows << "\n";
         cv::imshow(obj_det_filename, img);
         if (cv::waitKey(delay) == 27) {
             return;
@@ -54,6 +53,6 @@ void test_trained_detector(std::string obj_det_filename, std::string videofilena
 }
 
 int main() {
-    std::string path_to_saved_detector = "src/my_detector_2.xml";
+    std::string path_to_saved_detector = "src/my_detector_4.xml";
     test_trained_detector(path_to_saved_detector, "/dev/video0");
 }
