@@ -29,6 +29,8 @@ target_link_libraries(dlib_from_python /lib/x86_64-linux-gnu/libgsl.so.23)
 target_link_libraries(dlib_from_python /lib/x86_64-linux-gnu/libgslcblas.so.0)
 target_link_libraries(dlib_from_python /lib/x86_64-linux-gnu/liblapack.so)
 
+add_compile_options(dlib_from_python USE_SSE2_INSTRUCTIONS=ON USE_SSE4_INSTRUCTIONS=ON USE_AVX_INSTRUCTIONS=ON)
+
 find_package(PkgConfig)
 if (PKG_CONFIG_FOUND)
     pkg_check_modules(DLIB "dlib-1")
